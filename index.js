@@ -50,13 +50,13 @@ app.post('/submit-form',  async (req, res) => {
     additional,
   });
   try {
-    // Save the document to the database using async/await
-    await submission.save();
-    res.status(200).send('Form submitted successfully');
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Failed to save the submission');
-  }
+  
+  await submission.save();
+  res.status(200).json({ message: 'Form submitted successfully' }); // Return JSON response
+} catch (error) {
+  console.error(error);
+  res.status(500).json({ error: 'Failed to save the submission' }); // Return JSON response
+}
 });
 
 app.listen(3000, () => {
