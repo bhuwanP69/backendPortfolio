@@ -9,7 +9,7 @@ app.use(cors());
 
 
 
-let uri = 'mongodb+srv://Bhuwan:Bhuban45332@cluster0.vbqayks.mongodb.net/?retryWrites=true&w=majority'
+let uri = 'mongodb+srv://Bhuwan:Bhuban45332@cluster0.vbqayks.mongodb.net/bhuwanPortfolio?retryWrites=true&w=majority'
 // Connect to MongoDB
 mongoose.connect(uri);
 
